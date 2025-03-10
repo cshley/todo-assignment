@@ -5,6 +5,7 @@ Assignment project.
 Future considerations:
 
 - ADD TESTS!!!
+- Fix styling alignment
 - Review code for optimisation
 - UUID for TODO ID
 - Create useAppDispatch hook
