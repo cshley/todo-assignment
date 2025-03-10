@@ -11,7 +11,9 @@ export const TodoForm: React.FC<TodoFormTypes> = ({
 
     const onClickHandler = () => {
         if (!taskDescription.trim()) {
-            setError("It looks like you forgot to add a TODO. Type something and try again!");
+            setError(
+                "It looks like you forgot to add a TODO. Type something and try again!"
+            );
             return;
         }
         setError("");
@@ -24,7 +26,9 @@ export const TodoForm: React.FC<TodoFormTypes> = ({
             <label
                 htmlFor="task-description"
                 className="todo-form-task-description-label"
-            >What’s on your mind? Add a new TODO!</label>
+            >
+                What’s on your mind? Add a new TODO!
+            </label>
             <div className="todo-form-task-description-input-container">
                 <input
                     id="task-description"
