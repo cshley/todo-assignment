@@ -1,15 +1,18 @@
 import React from "react";
 
-import { HeaderProps } from "./HeaderTypes.ts";
+import { HeaderProps } from "./HeaderTypes";
 
 export const Header: React.FC<HeaderProps> = ({
     title,
     description,
 }: HeaderProps) => {
+    const ariaLabel: string = description
+        ? "site-title site-description"
+        : "site-title";
     return (
-        <header aria-labelledby="site-title site-description">
+        <header aria-labelledby={ariaLabel}>
             <h1 id="site-title">{title}</h1>
-            {description && <h2 id="site-description">{description}</h2>}
+            {description && <p id="site-description">{description}</p>}
         </header>
     );
 };

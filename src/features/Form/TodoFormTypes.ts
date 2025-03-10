@@ -1,4 +1,4 @@
-import { Todo } from "../Todo/TodoTypes.ts";
+import { Todo } from "../Todo/TodoTypes";
 
 export type TodoFormTypes = {
     dispatchTodoHandler: (todo: Todo) => void;

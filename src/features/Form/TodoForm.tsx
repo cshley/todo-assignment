@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Plus } from "lucide-react";
 
-import { TodoFormTypes } from "./TodoFormTypes.ts";
+import { TodoFormTypes } from "./TodoFormTypes";
 
 export const TodoForm: React.FC<TodoFormTypes> = ({
     dispatchTodoHandler,
@@ -17,7 +17,7 @@ export const TodoForm: React.FC<TodoFormTypes> = ({
             return;
         }
         setError("");
-        dispatchTodoHandler({ id: Math.random(), taskDescription });
+        dispatchTodoHandler({ id: Date.now(), taskDescription });
         setTaskDescription("");
     };
 
